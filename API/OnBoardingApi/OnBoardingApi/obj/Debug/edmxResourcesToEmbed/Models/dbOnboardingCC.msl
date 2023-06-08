@@ -254,5 +254,27 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="OBPPlantillaConocimientoPorPuesto" FunctionName="dbOnboardingCCModel.Store.OBPPlantillaConocimientoPorPuesto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbOnboardingCCModel.OBPPlantillaConocimientoPorPuesto_Result1">
+          <ScalarProperty Name="CodigoPuestoLaboral" ColumnName="CodigoPuestoLaboral" />
+          <ScalarProperty Name="CodigoActividadPrioritaria" ColumnName="CodigoActividadPrioritaria" />
+          <ScalarProperty Name="DescripcionAP" ColumnName="DescripcionAP" />
+          <ScalarProperty Name="CodigoAspectoTecnico" ColumnName="CodigoAspectoTecnico" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="DescripcionAST" ColumnName="DescripcionAST" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="OBPPlantillaRecursosPorPuesto" FunctionName="dbOnboardingCCModel.Store.OBPPlantillaRecursosPorPuesto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbOnboardingCCModel.OBPPlantillaRecursosPorPuesto_Result">
+          <ScalarProperty Name="CodigoPuestoLaboral" ColumnName="CodigoPuestoLaboral" />
+          <ScalarProperty Name="CodigoRecurso" ColumnName="CodigoRecurso" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Responsable" ColumnName="Responsable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

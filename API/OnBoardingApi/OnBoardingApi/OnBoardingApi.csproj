@@ -137,6 +137,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\ActitudController.cs" />
+    <Compile Include="Api\PlantillaPuestoActividadPrioritariaController.cs" />
+    <Compile Include="Api\PlantillaPuestoRecursoController.cs" />
     <Compile Include="Api\RecursoController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -189,6 +191,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbOnboardingCC.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OBPPlantillaConocimientoPorPuesto_Result.cs">
+      <DependentUpon>dbOnboardingCC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OBPPlantillaConocimientoPorPuesto_Result1.cs">
+      <DependentUpon>dbOnboardingCC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OBPPlantillaRecursosPorPuesto_Result.cs">
+      <DependentUpon>dbOnboardingCC.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OBTActitud.cs">
       <DependentUpon>dbOnboardingCC.tt</DependentUpon>

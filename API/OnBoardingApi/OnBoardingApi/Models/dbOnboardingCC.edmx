@@ -26,7 +26,7 @@
           </Key>
           <Property Name="CodigoActividadPrioritaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CodigoAspectoTecnico" Type="int" Nullable="false" />
-          <Property Name="Descripcion" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Activo" Type="bit" Nullable="false" />
           <Property Name="Eliminado" Type="bit" Nullable="false" />
           <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -407,6 +407,12 @@ advertencia 6002: La tabla o vista 'dbOnboardingCC.dbo.OBTResultadoCuadrante' no
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="OBPPlantillaConocimientoPorPuesto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodigoPuestoLaboral" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="OBPPlantillaRecursosPorPuesto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodigoPuestoLaboral" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="dbOnboardingCCModelStoreContainer">
           <EntitySet Name="OBTActitud" EntityType="Self.OBTActitud" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OBTActividadPrioritaria" EntityType="Self.OBTActividadPrioritaria" Schema="dbo" store:Type="Tables" />
@@ -563,6 +569,12 @@ advertencia 6002: La tabla o vista 'dbOnboardingCC.dbo.OBTResultadoCuadrante' no
             <End Role="OBTRecurso" EntitySet="OBTRecurso" />
             <End Role="OBTProcesoColaboradorRecurso" EntitySet="OBTProcesoColaboradorRecurso" />
           </AssociationSet>
+          <FunctionImport Name="OBPPlantillaConocimientoPorPuesto" ReturnType="Collection(dbOnboardingCCModel.OBPPlantillaConocimientoPorPuesto_Result1)">
+          <Parameter Name="CodigoPuestoLaboral" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="OBPPlantillaRecursosPorPuesto" ReturnType="Collection(dbOnboardingCCModel.OBPPlantillaRecursosPorPuesto_Result)">
+            <Parameter Name="CodigoPuestoLaboral" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="OBTActitud">
           <Key>
@@ -586,7 +598,7 @@ advertencia 6002: La tabla o vista 'dbOnboardingCC.dbo.OBTResultadoCuadrante' no
           </Key>
           <Property Name="CodigoActividadPrioritaria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CodigoAspectoTecnico" Type="Int32" Nullable="false" />
-          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Activo" Type="Boolean" Nullable="false" />
           <Property Name="Eliminado" Type="Boolean" Nullable="false" />
           <Property Name="UsuarioInserto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -990,6 +1002,28 @@ advertencia 6002: La tabla o vista 'dbOnboardingCC.dbo.OBTResultadoCuadrante' no
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="OBPPlantillaConocimientoPorPuesto_Result">
+          <Property Type="String" Name="CodigoPuestoLaboral" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="CodigoActividadPrioritaria" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" />
+          <Property Type="Int32" Name="CodigoAspectoTecnico" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="75" />
+          <Property Type="String" Name="Descripcion1" Nullable="false" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="OBPPlantillaConocimientoPorPuesto_Result1">
+          <Property Type="String" Name="CodigoPuestoLaboral" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="CodigoActividadPrioritaria" Nullable="false" />
+          <Property Type="String" Name="DescripcionAP" Nullable="false" />
+          <Property Type="Int32" Name="CodigoAspectoTecnico" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="75" />
+          <Property Type="String" Name="DescripcionAST" Nullable="false" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="OBPPlantillaRecursosPorPuesto_Result">
+          <Property Type="String" Name="CodigoPuestoLaboral" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="CodigoRecurso" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Responsable" Nullable="false" MaxLength="150" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1249,6 +1283,28 @@ advertencia 6002: La tabla o vista 'dbOnboardingCC.dbo.OBTResultadoCuadrante' no
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="OBPPlantillaConocimientoPorPuesto" FunctionName="dbOnboardingCCModel.Store.OBPPlantillaConocimientoPorPuesto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbOnboardingCCModel.OBPPlantillaConocimientoPorPuesto_Result1">
+                <ScalarProperty Name="CodigoPuestoLaboral" ColumnName="CodigoPuestoLaboral" />
+                <ScalarProperty Name="CodigoActividadPrioritaria" ColumnName="CodigoActividadPrioritaria" />
+                <ScalarProperty Name="DescripcionAP" ColumnName="DescripcionAP" />
+                <ScalarProperty Name="CodigoAspectoTecnico" ColumnName="CodigoAspectoTecnico" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="DescripcionAST" ColumnName="DescripcionAST" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="OBPPlantillaRecursosPorPuesto" FunctionName="dbOnboardingCCModel.Store.OBPPlantillaRecursosPorPuesto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbOnboardingCCModel.OBPPlantillaRecursosPorPuesto_Result">
+                <ScalarProperty Name="CodigoPuestoLaboral" ColumnName="CodigoPuestoLaboral" />
+                <ScalarProperty Name="CodigoRecurso" ColumnName="CodigoRecurso" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Responsable" ColumnName="Responsable" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

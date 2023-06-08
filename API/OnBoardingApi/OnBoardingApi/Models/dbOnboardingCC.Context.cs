@@ -12,6 +12,8 @@ namespace OnBoardingApi.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class dbOnboardingCCEntities : DbContext
     {
@@ -41,5 +43,23 @@ namespace OnBoardingApi.Models
         public virtual DbSet<OBTRecurso> OBTRecurso { get; set; }
         public virtual DbSet<OBTResultadoEvaluacion> OBTResultadoEvaluacion { get; set; }
         public virtual DbSet<OBTResultadoCuadrante> OBTResultadoCuadrante { get; set; }
+    
+        public virtual ObjectResult<OBPPlantillaConocimientoPorPuesto_Result1> OBPPlantillaConocimientoPorPuesto(string codigoPuestoLaboral)
+        {
+            var codigoPuestoLaboralParameter = codigoPuestoLaboral != null ?
+                new ObjectParameter("CodigoPuestoLaboral", codigoPuestoLaboral) :
+                new ObjectParameter("CodigoPuestoLaboral", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<OBPPlantillaConocimientoPorPuesto_Result1>("OBPPlantillaConocimientoPorPuesto", codigoPuestoLaboralParameter);
+        }
+    
+        public virtual ObjectResult<OBPPlantillaRecursosPorPuesto_Result> OBPPlantillaRecursosPorPuesto(string codigoPuestoLaboral)
+        {
+            var codigoPuestoLaboralParameter = codigoPuestoLaboral != null ?
+                new ObjectParameter("CodigoPuestoLaboral", codigoPuestoLaboral) :
+                new ObjectParameter("CodigoPuestoLaboral", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<OBPPlantillaRecursosPorPuesto_Result>("OBPPlantillaRecursosPorPuesto", codigoPuestoLaboralParameter);
+        }
     }
 }

@@ -21,7 +21,7 @@
     </Key>
     <Property Name="CodigoActividadPrioritaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CodigoAspectoTecnico" Type="int" Nullable="false" />
-    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Activo" Type="bit" Nullable="false" />
     <Property Name="Eliminado" Type="bit" Nullable="false" />
     <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -402,6 +402,12 @@ advertencia 6002: La tabla o vista 'dbOnboardingCC.dbo.OBTResultadoCuadrante' no
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="OBPPlantillaConocimientoPorPuesto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoPuestoLaboral" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="OBPPlantillaRecursosPorPuesto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoPuestoLaboral" Type="nvarchar" Mode="In" />
+  </Function>
   <EntityContainer Name="dbOnboardingCCModelStoreContainer">
     <EntitySet Name="OBTActitud" EntityType="Self.OBTActitud" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OBTActividadPrioritaria" EntityType="Self.OBTActividadPrioritaria" Schema="dbo" store:Type="Tables" />

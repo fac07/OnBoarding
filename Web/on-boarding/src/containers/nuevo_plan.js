@@ -4,18 +4,33 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { FaTrash, FaPlus } from 'react-icons/fa';
 import { getActitud } from "../utils/getActitud";
-
+import { getPlantillaConocimientoPorPuesto } from "../utils/getPlantillaConocimientoPorPuesto";
+import { getPlantillaRecursoPorPuesto } from "../utils/getPlantillaRecursoPorPuesto";
 
 const NuevoPlan = () => {
 
     const [resultActitud, setListActitud] = useState([]);
+    const [resultConocimiento, setListConocimiento] = useState([]);
+    const [resultRecurso, setListRecurso] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [isLoadingConicimiento, setIsLoadingConicimiento] = useState(true);
+    const [isLoadingRecurso, setIsLoadingRecurso] = useState(true);
 
     useEffect(() => {
         getActitud().then((items) => {
             setListActitud(items)
         })
         .finally(() => setIsLoading(false));
+
+        getPlantillaConocimientoPorPuesto('03240064').then((items) => {
+            setListConocimiento(items)
+        })
+        .finally(() => setIsLoadingConicimiento(false));
+
+        getPlantillaRecursoPorPuesto('03240064').then((items) => {
+            setListRecurso(items)
+        })
+        .finally(() => setIsLoadingRecurso(false));
     },[]);
 
     return <Layout>
@@ -45,21 +60,20 @@ const NuevoPlan = () => {
                     </tr>
                     </thead>
                     <tbody>
+                    {isLoadingConicimiento ? <tr><td>Cargando...</td></tr>:
+                    resultConocimiento.map((row) => (
+                        <tr key={row.CodigoActividadPrioritaria}>
+                            <td>{row.Nombre} ({row.DescripcionAST})</td>
+                            <td>{row.DescripcionAP}</td>
+                            <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
+                        </tr>
+                    ))}
                     <tr>
                         <td>OBJETIVOS DE APRENDIZAJE</td>
                         <td>Conocimiento del Negocio y Estructuras Organizacionales</td>
                         <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
                     </tr>
-                    <tr>
-                        <td>OBJETIVOS DE APRENDIZAJE</td>
-                        <td>Conocimiento de la Cultura ILU / Valores organizacionales y Código de Ética</td>
-                        <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
-                    </tr>
-                    <tr>
-                        <td>OBJETIVOS DE APRENDIZAJE</td>
-                        <td>Procesos de la Gerencia Financiera y procesos de Costos y Presupuestos.</td>
-                        <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
-                    </tr>
+                    
                     <tr>
                         <td colspan="2">&nbsp;</td>
                         <td><Button size="sm" variant="success" ><FaPlus /></Button></td>
@@ -103,21 +117,14 @@ const NuevoPlan = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Contrato de trabajo</td>
-                        <td>Compensaciones y Beneficios</td>
-                        <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
-                    </tr>
-                    <tr>
-                        <td>Tarjeta de seguro de vida y gastos médicos</td>
-                        <td>Compensaciones y Beneficios</td>
-                        <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
-                    </tr>
-                    <tr>
-                        <td>Formulario de Auxilio Póstumo</td>
-                        <td>Compensaciones y Beneficios</td>
-                        <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
-                    </tr>
+                    {isLoadingRecurso ? <tr><td>Cargando...</td></tr>:
+                    resultRecurso.map((row) => (
+                        <tr key={row.CodigoRecurso}>
+                            <td>{row.Descripcion}</td>
+                            <td>{row.Responsable}</td>
+                            <td><Button size="sm" variant="danger" ><FaTrash /></Button></td>
+                        </tr>
+                    ))}
                     <tr>
                         <td colspan="2">&nbsp;</td>
                         <td><Button size="sm"  variant="success" ><FaPlus /></Button></td>
