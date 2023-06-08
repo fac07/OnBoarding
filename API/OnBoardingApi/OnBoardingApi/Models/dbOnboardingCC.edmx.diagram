@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="99515d61c25c4b2a81b79ee2f949abc2" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTActitud" Width="1.5" PointX="5.125" PointY="17.25" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTActividadPrioritaria" Width="1.5" PointX="5.125" PointY="3.125" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTAspectoTecnico" Width="1.5" PointX="2.875" PointY="3.375" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTEscalaCalificacion" Width="1.5" PointX="10.875" PointY="0.875" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTEstadoEvaluacion" Width="1.5" PointX="8.125" PointY="0.625" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTEstadoProcesoColaborador" Width="1.5" PointX="2.875" PointY="8.375" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTPlantillaPuestoActividadPrioritaria" Width="1.5" PointX="7.375" PointY="26.375" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTPlantillaPuestoRecurso" Width="1.5" PointX="7.375" PointY="22.375" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTProcesoColaborador" Width="1.5" PointX="5.125" PointY="7.5" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTProcesoColaboradorActitud" Width="1.5" PointX="7.375" PointY="13.125" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTProcesoColaboradorActividadPrioritaria" Width="1.5" PointX="7.375" PointY="4.25" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTProcesoColaboradorEvaluacion" Width="1.5" PointX="10.375" PointY="7.75" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTProcesoColaboradorRecurso" Width="1.5" PointX="7.375" PointY="8.125" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTRecurso" Width="1.5" PointX="5.125" PointY="13.25" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTResultadoEvaluacion" Width="1.5" PointX="8.125" PointY="18.125" />
+        <EntityTypeShape EntityType="dbOnboardingCCModel.OBTResultadoCuadrante" Width="1.5" PointX="12.875" PointY="0.875" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorActitud_OBTActitud" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTActividadPrioritaria_OBTAspectoTecnico" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTPlantillaPuestoActividadPrioritaria_OBTActividadPrioritaria" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorActividadPrioritaria_OBTActividadPrioritaria" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorEvaluacion_OBTEstadoEvaluacion" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaborador_OBTEstadoProcesoColaborador" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTPlantillaPuestoRecurso_OBTRecurso" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorActitud_OBTProcesoColaborador" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorActividadPrioritaria_OBTProcesoColaborador" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorEvaluacion_OBTProcesoColaborador" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorRecurso_OBTProcesoColaborador" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorEvaluacion_OBTResultadoEvaluacion" />
+        <AssociationConnector Association="dbOnboardingCCModel.FK_OBTProcesoColaboradorRecurso_OBTRecurso" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

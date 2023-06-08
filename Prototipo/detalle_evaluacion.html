@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnBoarding</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .NuevoProcesoBtn {
+            background-color : rgb(105, 189, 75);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border-color: rgb(105, 189, 75);
+            cursor: pointer;
+        }
+
+        #mybutton {
+            position: fixed;
+            bottom: -4px;
+            right: 10px;
+        }
+        .formContainer{
+            width: 950px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .resultado{
+            background-color: #92D050;
+            font-size: x-large;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .tituloResultado{
+            background-color: #0F243E; 
+            color: #FFF;
+        }
+        .textoBlanco{
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">OnBoarding</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="evaluaciones.html">Evaluaciones</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Maestros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Recursos</a>
+                    <a class="dropdown-item" href="#">Habilidades</a>
+                    <a class="dropdown-item" href="#">Actitudes</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reportes.html">Reportes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="formContainer">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td colspan="5" class="tituloResultado" style="text-align: center;">Evaluación 1</td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: center;">Matriz de coaching</td>
+                </tr>
+                <tr>
+                    <td style="width: 230px;">
+                        <h6>Colaborador</h6><br />
+                        Juan Perez
+                    </td>
+                    <td style="width: 230px;">
+                        <h6>Departamento</h6><br />
+                        
+                    </td>
+                    <td></td>
+                    <td style="width: 230px;">
+                        <h6>Fecha de evaluación</h6><br />
+                        07-06-2023
+                    </td>
+                    <td style="width: 230px;">
+                        <h6>Jefe inmediato</h6><br />
+                        Ing.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="tituloResultado">Entrenar</td>
+                    <td></td>
+                    <td colspan="2" class="tituloResultado">Onboarding</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="textoBlanco" style="height: 200px;">Entrenar</td>
+                    <td></td>
+                    <td colspan="2" class="textoBlanco resultado">Onboarding</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="tituloResultado">Desvincular</td>
+                    <td></td>
+                    <td colspan="2" class="tituloResultado">Dar Acompañamiento</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="textoBlanco" style="height: 200px;">Desvincular</td>
+                    <td></td>
+                    <td colspan="2" class="textoBlanco">Dar Acompañamiento</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

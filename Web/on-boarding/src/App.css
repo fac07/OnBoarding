@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.NuevoProcesoBtn {
+  background-color : rgb(105, 189, 75);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: rgb(105, 189, 75);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.NuevoProcesoBtn:hover{
+  text-decoration: none;
+  color: white;
+  background-color : rgba(105, 189, 75, 0.802);
+}
+
+
+#mybutton {
+  position: fixed;
+  bottom: 6px;
+  right: 10px;
+}
+
+.formContainer{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: small;
+}
+
+.formContainerSM{
+  width: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: small;
+}
+
+
+.resultado{
+  background-color: #92D050 !important;
+  font-size: x-large;
+  text-align: center;
+  vertical-align: middle;
+}
+.tituloResultado{
+  background-color: #0F243E !important;
+  color: #FFF !important;
+}
+.textoBlanco{
+  color: #FFF !important;
+}

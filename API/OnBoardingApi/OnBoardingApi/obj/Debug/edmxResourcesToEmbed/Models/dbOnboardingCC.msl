@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbOnboardingCCModelStoreContainer" CdmEntityContainer="dbOnboardingCCEntities">
+    <EntitySetMapping Name="OBTActitud">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTActitud">
+        <MappingFragment StoreEntitySet="OBTActitud">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CodigoActitud" ColumnName="CodigoActitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTActividadPrioritaria">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTActividadPrioritaria">
+        <MappingFragment StoreEntitySet="OBTActividadPrioritaria">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodigoAspectoTecnico" ColumnName="CodigoAspectoTecnico" />
+          <ScalarProperty Name="CodigoActividadPrioritaria" ColumnName="CodigoActividadPrioritaria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTAspectoTecnico">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTAspectoTecnico">
+        <MappingFragment StoreEntitySet="OBTAspectoTecnico">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CodigoAspectoTecnico" ColumnName="CodigoAspectoTecnico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTEscalaCalificacion">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTEscalaCalificacion">
+        <MappingFragment StoreEntitySet="OBTEscalaCalificacion">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="ValorMaximo" ColumnName="ValorMaximo" />
+          <ScalarProperty Name="ValorMinimo" ColumnName="ValorMinimo" />
+          <ScalarProperty Name="CodigoEscalaCalificacion" ColumnName="CodigoEscalaCalificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTEstadoEvaluacion">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTEstadoEvaluacion">
+        <MappingFragment StoreEntitySet="OBTEstadoEvaluacion">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodigoEstadoEvaluacion" ColumnName="CodigoEstadoEvaluacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTEstadoProcesoColaborador">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTEstadoProcesoColaborador">
+        <MappingFragment StoreEntitySet="OBTEstadoProcesoColaborador">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="AccionRealizada" ColumnName="AccionRealizada" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodigoEstadoProcesoColaborador" ColumnName="CodigoEstadoProcesoColaborador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTPlantillaPuestoActividadPrioritaria">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTPlantillaPuestoActividadPrioritaria">
+        <MappingFragment StoreEntitySet="OBTPlantillaPuestoActividadPrioritaria">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoActividadPrioritaria" ColumnName="CodigoActividadPrioritaria" />
+          <ScalarProperty Name="CodigoPuestoLaboral" ColumnName="CodigoPuestoLaboral" />
+          <ScalarProperty Name="CodigoPlantillaPuestoActividadPrioritaria" ColumnName="CodigoPlantillaPuestoActividadPrioritaria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTPlantillaPuestoRecurso">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTPlantillaPuestoRecurso">
+        <MappingFragment StoreEntitySet="OBTPlantillaPuestoRecurso">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoRecurso" ColumnName="CodigoRecurso" />
+          <ScalarProperty Name="CodigoPuestoLaboral" ColumnName="CodigoPuestoLaboral" />
+          <ScalarProperty Name="CodigoPlantillaPuestoRecurso" ColumnName="CodigoPlantillaPuestoRecurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTProcesoColaborador">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTProcesoColaborador">
+        <MappingFragment StoreEntitySet="OBTProcesoColaborador">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoEstadoProcesoColaborador" ColumnName="CodigoEstadoProcesoColaborador" />
+          <ScalarProperty Name="FechaInicioProceso" ColumnName="FechaInicioProceso" />
+          <ScalarProperty Name="NoEvaluaciones" ColumnName="NoEvaluaciones" />
+          <ScalarProperty Name="NombrePuestoLaboral" ColumnName="NombrePuestoLaboral" />
+          <ScalarProperty Name="CodigoPuestoLaboral" ColumnName="CodigoPuestoLaboral" />
+          <ScalarProperty Name="NombreColaborador" ColumnName="NombreColaborador" />
+          <ScalarProperty Name="CodigoColaborador" ColumnName="CodigoColaborador" />
+          <ScalarProperty Name="CodigoProcesoColaborador" ColumnName="CodigoProcesoColaborador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTProcesoColaboradorActitud">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTProcesoColaboradorActitud">
+        <MappingFragment StoreEntitySet="OBTProcesoColaboradorActitud">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="CodigoActitud" ColumnName="CodigoActitud" />
+          <ScalarProperty Name="CodigoProcesoColaborador" ColumnName="CodigoProcesoColaborador" />
+          <ScalarProperty Name="CodigoProcesoColaboradorActitud" ColumnName="CodigoProcesoColaboradorActitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTProcesoColaboradorActividadPrioritaria">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTProcesoColaboradorActividadPrioritaria">
+        <MappingFragment StoreEntitySet="OBTProcesoColaboradorActividadPrioritaria">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoActividadPrioritaria" ColumnName="CodigoActividadPrioritaria" />
+          <ScalarProperty Name="CodigoProcesoColaborador" ColumnName="CodigoProcesoColaborador" />
+          <ScalarProperty Name="CodigoProcesoColaboradorActividadPrioritaria" ColumnName="CodigoProcesoColaboradorActividadPrioritaria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTProcesoColaboradorEvaluacion">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTProcesoColaboradorEvaluacion">
+        <MappingFragment StoreEntitySet="OBTProcesoColaboradorEvaluacion">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoResultadoEvaluacion" ColumnName="CodigoResultadoEvaluacion" />
+          <ScalarProperty Name="PunteoWill" ColumnName="PunteoWill" />
+          <ScalarProperty Name="PunteoConocimiento" ColumnName="PunteoConocimiento" />
+          <ScalarProperty Name="NoEvaluacion" ColumnName="NoEvaluacion" />
+          <ScalarProperty Name="CodigoEstadoEvaluacion" ColumnName="CodigoEstadoEvaluacion" />
+          <ScalarProperty Name="CodigoProcesoColaborador" ColumnName="CodigoProcesoColaborador" />
+          <ScalarProperty Name="CodigoProcesoColaboradorEvaluacion" ColumnName="CodigoProcesoColaboradorEvaluacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTProcesoColaboradorRecurso">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTProcesoColaboradorRecurso">
+        <MappingFragment StoreEntitySet="OBTProcesoColaboradorRecurso">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="FechaCumplimiento" ColumnName="FechaCumplimiento" />
+          <ScalarProperty Name="CodigoRecurso" ColumnName="CodigoRecurso" />
+          <ScalarProperty Name="CodigoProcesoColaborador" ColumnName="CodigoProcesoColaborador" />
+          <ScalarProperty Name="CodigoProcesoColaboradorRecurso" ColumnName="CodigoProcesoColaboradorRecurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTRecurso">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTRecurso">
+        <MappingFragment StoreEntitySet="OBTRecurso">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Responsable" ColumnName="Responsable" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodigoRecurso" ColumnName="CodigoRecurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTResultadoEvaluacion">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTResultadoEvaluacion">
+        <MappingFragment StoreEntitySet="OBTResultadoEvaluacion">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="NoCuadrante" ColumnName="NoCuadrante" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodigoResultadoEvaluacion" ColumnName="CodigoResultadoEvaluacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBTResultadoCuadrante">
+      <EntityTypeMapping TypeName="dbOnboardingCCModel.OBTResultadoCuadrante">
+        <MappingFragment StoreEntitySet="OBTResultadoCuadrante">
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="ValorEjeY" ColumnName="ValorEjeY" />
+          <ScalarProperty Name="ValorEjeX" ColumnName="ValorEjeX" />
+          <ScalarProperty Name="NoCuadrante" ColumnName="NoCuadrante" />
+          <ScalarProperty Name="CodigoResultadoCuadrante" ColumnName="CodigoResultadoCuadrante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

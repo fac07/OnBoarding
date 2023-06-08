@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnBoarding</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .NuevoProcesoBtn {
+            background-color : rgb(105, 189, 75);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border-color: rgb(105, 189, 75);
+            cursor: pointer;
+        }
+
+        .NuevoProcesoBtn:hover{
+            text-decoration: none;
+            color: white;
+            background-color : rgba(105, 189, 75, 0.802);
+        }
+
+        #mybutton {
+            position: fixed;
+            bottom: 6px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">OnBoarding</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="evaluaciones.html">Evaluaciones</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Maestros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Recursos</a>
+                    <a class="dropdown-item" href="#">Habilidades</a>
+                    <a class="dropdown-item" href="#">Actitudes</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reportes.html">Reportes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <br />
+    <h3>
+        Procesos en curso
+    </h3>
+    <br />
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Código colaborador</th>
+            <th scope="col">Nombre colaborador</th>
+            <th scope="col">Puesto</th>
+            <th scope="col">Fecha próxima evaluación</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">999202</th>
+            <td>Juan Perez</td>
+            <td>Gestor</td>
+            <td>01-06-2023</td>
+            <td><button type="button" class="btn btn-primary btn-sm" onclick="location.href='nueva_evaluacion.html';" >Evaluar</button></td>
+        </tr>
+        <tr>
+            <th scope="row">999203</th>
+            <td>Maria Perez</td>
+            <td>Gestor</td>
+            <td>02-06-2023</td>
+            <td><button type="button" class="btn btn-primary btn-sm" onclick="location.href='nueva_evaluacion.html';" >Evaluar</button></td>
+        </tr>
+        <tr>
+            <th scope="row">999204</th>
+            <td>Pablo Lopez</td>
+            <td>Gestor</td>
+            <td>03-06-2023</td>
+            <td><button type="button" class="btn btn-primary btn-sm" onclick="location.href='nueva_evaluacion.html';" >Evaluar</button></td>
+        </tr>
+        <tr>
+            <th scope="row">999205</th>
+            <td>Ana Lopez</td>
+            <td>Gestor</td>
+            <td>03-09-2023</td>
+            <td><button type="button" class="btn btn-primary btn-sm" disabled>Evaluar</button></td>
+        </tr>
+        <tr>
+            <th scope="row">999206</th>
+            <td>Pedro Pereira</td>
+            <td>Gestor</td>
+            <td>01-09-2023</td>
+            <td><button type="button" class="btn btn-primary btn-sm" disabled>Evaluar</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

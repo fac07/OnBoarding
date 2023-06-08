@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbOnboardingCCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="OBTActitud">
+    <Key>
+      <PropertyRef Name="CodigoActitud" />
+    </Key>
+    <Property Name="CodigoActitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Peso" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTActividadPrioritaria">
+    <Key>
+      <PropertyRef Name="CodigoActividadPrioritaria" />
+    </Key>
+    <Property Name="CodigoActividadPrioritaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoAspectoTecnico" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTAspectoTecnico">
+    <Key>
+      <PropertyRef Name="CodigoAspectoTecnico" />
+    </Key>
+    <Property Name="CodigoAspectoTecnico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="75" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTEscalaCalificacion">
+    <Key>
+      <PropertyRef Name="CodigoEscalaCalificacion" />
+    </Key>
+    <Property Name="CodigoEscalaCalificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ValorMinimo" Type="int" Nullable="false" />
+    <Property Name="ValorMaximo" Type="int" Nullable="false" />
+    <Property Name="Resultado" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTEstadoEvaluacion">
+    <Key>
+      <PropertyRef Name="CodigoEstadoEvaluacion" />
+    </Key>
+    <Property Name="CodigoEstadoEvaluacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTEstadoProcesoColaborador">
+    <Key>
+      <PropertyRef Name="CodigoEstadoProcesoColaborador" />
+    </Key>
+    <Property Name="CodigoEstadoProcesoColaborador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="AccionRealizada" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTPlantillaPuestoActividadPrioritaria">
+    <Key>
+      <PropertyRef Name="CodigoPlantillaPuestoActividadPrioritaria" />
+    </Key>
+    <Property Name="CodigoPlantillaPuestoActividadPrioritaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoPuestoLaboral" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CodigoActividadPrioritaria" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTPlantillaPuestoRecurso">
+    <Key>
+      <PropertyRef Name="CodigoPlantillaPuestoRecurso" />
+    </Key>
+    <Property Name="CodigoPlantillaPuestoRecurso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoPuestoLaboral" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CodigoRecurso" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTProcesoColaborador">
+    <Key>
+      <PropertyRef Name="CodigoProcesoColaborador" />
+    </Key>
+    <Property Name="CodigoProcesoColaborador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoColaborador" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="NombreColaborador" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CodigoPuestoLaboral" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NombrePuestoLaboral" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NoEvaluaciones" Type="int" Nullable="false" />
+    <Property Name="FechaInicioProceso" Type="datetime" Nullable="false" />
+    <Property Name="CodigoEstadoProcesoColaborador" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTProcesoColaboradorActitud">
+    <Key>
+      <PropertyRef Name="CodigoProcesoColaboradorActitud" />
+    </Key>
+    <Property Name="CodigoProcesoColaboradorActitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoProcesoColaborador" Type="int" Nullable="false" />
+    <Property Name="CodigoActitud" Type="int" Nullable="false" />
+    <Property Name="Peso" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTProcesoColaboradorActividadPrioritaria">
+    <Key>
+      <PropertyRef Name="CodigoProcesoColaboradorActividadPrioritaria" />
+    </Key>
+    <Property Name="CodigoProcesoColaboradorActividadPrioritaria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoProcesoColaborador" Type="int" Nullable="false" />
+    <Property Name="CodigoActividadPrioritaria" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTProcesoColaboradorEvaluacion">
+    <Key>
+      <PropertyRef Name="CodigoProcesoColaboradorEvaluacion" />
+    </Key>
+    <Property Name="CodigoProcesoColaboradorEvaluacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoProcesoColaborador" Type="int" Nullable="false" />
+    <Property Name="CodigoEstadoEvaluacion" Type="int" Nullable="false" />
+    <Property Name="NoEvaluacion" Type="int" Nullable="false" />
+    <Property Name="PunteoConocimiento" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PunteoWill" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CodigoResultadoEvaluacion" Type="int" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTProcesoColaboradorRecurso">
+    <Key>
+      <PropertyRef Name="CodigoProcesoColaboradorRecurso" />
+    </Key>
+    <Property Name="CodigoProcesoColaboradorRecurso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoProcesoColaborador" Type="int" Nullable="false" />
+    <Property Name="CodigoRecurso" Type="int" Nullable="false" />
+    <Property Name="FechaCumplimiento" Type="datetime" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTRecurso">
+    <Key>
+      <PropertyRef Name="CodigoRecurso" />
+    </Key>
+    <Property Name="CodigoRecurso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Responsable" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbOnboardingCC.dbo.OBTResultadoCuadrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="OBTResultadoCuadrante">
+    <Key>
+      <PropertyRef Name="CodigoResultadoCuadrante" />
+      <PropertyRef Name="NoCuadrante" />
+      <PropertyRef Name="ValorEjeX" />
+      <PropertyRef Name="ValorEjeY" />
+      <PropertyRef Name="Activo" />
+      <PropertyRef Name="Eliminado" />
+      <PropertyRef Name="UsuarioInserto" />
+      <PropertyRef Name="FechaInserto" />
+    </Key>
+    <Property Name="CodigoResultadoCuadrante" Type="int" Nullable="false" />
+    <Property Name="NoCuadrante" Type="int" Nullable="false" />
+    <Property Name="ValorEjeX" Type="int" Nullable="false" />
+    <Property Name="ValorEjeY" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OBTResultadoEvaluacion">
+    <Key>
+      <PropertyRef Name="CodigoResultadoEvaluacion" />
+    </Key>
+    <Property Name="CodigoResultadoEvaluacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NoCuadrante" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaModifico" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_OBTActividadPrioritaria_OBTAspectoTecnico">
+    <End Role="OBTAspectoTecnico" Type="Self.OBTAspectoTecnico" Multiplicity="1" />
+    <End Role="OBTActividadPrioritaria" Type="Self.OBTActividadPrioritaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTAspectoTecnico">
+        <PropertyRef Name="CodigoAspectoTecnico" />
+      </Principal>
+      <Dependent Role="OBTActividadPrioritaria">
+        <PropertyRef Name="CodigoAspectoTecnico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTPlantillaPuestoActividadPrioritaria_OBTActividadPrioritaria">
+    <End Role="OBTActividadPrioritaria" Type="Self.OBTActividadPrioritaria" Multiplicity="1" />
+    <End Role="OBTPlantillaPuestoActividadPrioritaria" Type="Self.OBTPlantillaPuestoActividadPrioritaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTActividadPrioritaria">
+        <PropertyRef Name="CodigoActividadPrioritaria" />
+      </Principal>
+      <Dependent Role="OBTPlantillaPuestoActividadPrioritaria">
+        <PropertyRef Name="CodigoActividadPrioritaria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTPlantillaPuestoRecurso_OBTRecurso">
+    <End Role="OBTRecurso" Type="Self.OBTRecurso" Multiplicity="1" />
+    <End Role="OBTPlantillaPuestoRecurso" Type="Self.OBTPlantillaPuestoRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTRecurso">
+        <PropertyRef Name="CodigoRecurso" />
+      </Principal>
+      <Dependent Role="OBTPlantillaPuestoRecurso">
+        <PropertyRef Name="CodigoRecurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaborador_OBTEstadoProcesoColaborador">
+    <End Role="OBTEstadoProcesoColaborador" Type="Self.OBTEstadoProcesoColaborador" Multiplicity="1" />
+    <End Role="OBTProcesoColaborador" Type="Self.OBTProcesoColaborador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTEstadoProcesoColaborador">
+        <PropertyRef Name="CodigoEstadoProcesoColaborador" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaborador">
+        <PropertyRef Name="CodigoEstadoProcesoColaborador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorActitud_OBTActitud">
+    <End Role="OBTActitud" Type="Self.OBTActitud" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorActitud" Type="Self.OBTProcesoColaboradorActitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTActitud">
+        <PropertyRef Name="CodigoActitud" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorActitud">
+        <PropertyRef Name="CodigoActitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorActitud_OBTProcesoColaborador">
+    <End Role="OBTProcesoColaborador" Type="Self.OBTProcesoColaborador" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorActitud" Type="Self.OBTProcesoColaboradorActitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTProcesoColaborador">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorActitud">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorActividadPrioritaria_OBTActividadPrioritaria">
+    <End Role="OBTActividadPrioritaria" Type="Self.OBTActividadPrioritaria" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorActividadPrioritaria" Type="Self.OBTProcesoColaboradorActividadPrioritaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTActividadPrioritaria">
+        <PropertyRef Name="CodigoActividadPrioritaria" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorActividadPrioritaria">
+        <PropertyRef Name="CodigoActividadPrioritaria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorActividadPrioritaria_OBTProcesoColaborador">
+    <End Role="OBTProcesoColaborador" Type="Self.OBTProcesoColaborador" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorActividadPrioritaria" Type="Self.OBTProcesoColaboradorActividadPrioritaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTProcesoColaborador">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorActividadPrioritaria">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorEvaluacion_OBTEstadoEvaluacion">
+    <End Role="OBTEstadoEvaluacion" Type="Self.OBTEstadoEvaluacion" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorEvaluacion" Type="Self.OBTProcesoColaboradorEvaluacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTEstadoEvaluacion">
+        <PropertyRef Name="CodigoEstadoEvaluacion" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorEvaluacion">
+        <PropertyRef Name="CodigoEstadoEvaluacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorEvaluacion_OBTProcesoColaborador">
+    <End Role="OBTProcesoColaborador" Type="Self.OBTProcesoColaborador" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorEvaluacion" Type="Self.OBTProcesoColaboradorEvaluacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTProcesoColaborador">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorEvaluacion">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorEvaluacion_OBTResultadoEvaluacion">
+    <End Role="OBTResultadoEvaluacion" Type="Self.OBTResultadoEvaluacion" Multiplicity="0..1" />
+    <End Role="OBTProcesoColaboradorEvaluacion" Type="Self.OBTProcesoColaboradorEvaluacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTResultadoEvaluacion">
+        <PropertyRef Name="CodigoResultadoEvaluacion" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorEvaluacion">
+        <PropertyRef Name="CodigoResultadoEvaluacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorRecurso_OBTProcesoColaborador">
+    <End Role="OBTProcesoColaborador" Type="Self.OBTProcesoColaborador" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorRecurso" Type="Self.OBTProcesoColaboradorRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTProcesoColaborador">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorRecurso">
+        <PropertyRef Name="CodigoProcesoColaborador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBTProcesoColaboradorRecurso_OBTRecurso">
+    <End Role="OBTRecurso" Type="Self.OBTRecurso" Multiplicity="1" />
+    <End Role="OBTProcesoColaboradorRecurso" Type="Self.OBTProcesoColaboradorRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OBTRecurso">
+        <PropertyRef Name="CodigoRecurso" />
+      </Principal>
+      <Dependent Role="OBTProcesoColaboradorRecurso">
+        <PropertyRef Name="CodigoRecurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbOnboardingCCModelStoreContainer">
+    <EntitySet Name="OBTActitud" EntityType="Self.OBTActitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTActividadPrioritaria" EntityType="Self.OBTActividadPrioritaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTAspectoTecnico" EntityType="Self.OBTAspectoTecnico" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTEscalaCalificacion" EntityType="Self.OBTEscalaCalificacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTEstadoEvaluacion" EntityType="Self.OBTEstadoEvaluacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTEstadoProcesoColaborador" EntityType="Self.OBTEstadoProcesoColaborador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTPlantillaPuestoActividadPrioritaria" EntityType="Self.OBTPlantillaPuestoActividadPrioritaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTPlantillaPuestoRecurso" EntityType="Self.OBTPlantillaPuestoRecurso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTProcesoColaborador" EntityType="Self.OBTProcesoColaborador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTProcesoColaboradorActitud" EntityType="Self.OBTProcesoColaboradorActitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTProcesoColaboradorActividadPrioritaria" EntityType="Self.OBTProcesoColaboradorActividadPrioritaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTProcesoColaboradorEvaluacion" EntityType="Self.OBTProcesoColaboradorEvaluacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTProcesoColaboradorRecurso" EntityType="Self.OBTProcesoColaboradorRecurso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTRecurso" EntityType="Self.OBTRecurso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTResultadoEvaluacion" EntityType="Self.OBTResultadoEvaluacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBTResultadoCuadrante" EntityType="Self.OBTResultadoCuadrante" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OBTResultadoCuadrante].[CodigoResultadoCuadrante] AS [CodigoResultadoCuadrante], 
+    [OBTResultadoCuadrante].[NoCuadrante] AS [NoCuadrante], 
+    [OBTResultadoCuadrante].[ValorEjeX] AS [ValorEjeX], 
+    [OBTResultadoCuadrante].[ValorEjeY] AS [ValorEjeY], 
+    [OBTResultadoCuadrante].[Activo] AS [Activo], 
+    [OBTResultadoCuadrante].[Eliminado] AS [Eliminado], 
+    [OBTResultadoCuadrante].[UsuarioInserto] AS [UsuarioInserto], 
+    [OBTResultadoCuadrante].[FechaInserto] AS [FechaInserto], 
+    [OBTResultadoCuadrante].[UsuarioModifico] AS [UsuarioModifico], 
+    [OBTResultadoCuadrante].[FechaModifico] AS [FechaModifico]
+    FROM [dbo].[OBTResultadoCuadrante] AS [OBTResultadoCuadrante]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_OBTActividadPrioritaria_OBTAspectoTecnico" Association="Self.FK_OBTActividadPrioritaria_OBTAspectoTecnico">
+      <End Role="OBTAspectoTecnico" EntitySet="OBTAspectoTecnico" />
+      <End Role="OBTActividadPrioritaria" EntitySet="OBTActividadPrioritaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTPlantillaPuestoActividadPrioritaria_OBTActividadPrioritaria" Association="Self.FK_OBTPlantillaPuestoActividadPrioritaria_OBTActividadPrioritaria">
+      <End Role="OBTActividadPrioritaria" EntitySet="OBTActividadPrioritaria" />
+      <End Role="OBTPlantillaPuestoActividadPrioritaria" EntitySet="OBTPlantillaPuestoActividadPrioritaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTPlantillaPuestoRecurso_OBTRecurso" Association="Self.FK_OBTPlantillaPuestoRecurso_OBTRecurso">
+      <End Role="OBTRecurso" EntitySet="OBTRecurso" />
+      <End Role="OBTPlantillaPuestoRecurso" EntitySet="OBTPlantillaPuestoRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaborador_OBTEstadoProcesoColaborador" Association="Self.FK_OBTProcesoColaborador_OBTEstadoProcesoColaborador">
+      <End Role="OBTEstadoProcesoColaborador" EntitySet="OBTEstadoProcesoColaborador" />
+      <End Role="OBTProcesoColaborador" EntitySet="OBTProcesoColaborador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorActitud_OBTActitud" Association="Self.FK_OBTProcesoColaboradorActitud_OBTActitud">
+      <End Role="OBTActitud" EntitySet="OBTActitud" />
+      <End Role="OBTProcesoColaboradorActitud" EntitySet="OBTProcesoColaboradorActitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorActitud_OBTProcesoColaborador" Association="Self.FK_OBTProcesoColaboradorActitud_OBTProcesoColaborador">
+      <End Role="OBTProcesoColaborador" EntitySet="OBTProcesoColaborador" />
+      <End Role="OBTProcesoColaboradorActitud" EntitySet="OBTProcesoColaboradorActitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorActividadPrioritaria_OBTActividadPrioritaria" Association="Self.FK_OBTProcesoColaboradorActividadPrioritaria_OBTActividadPrioritaria">
+      <End Role="OBTActividadPrioritaria" EntitySet="OBTActividadPrioritaria" />
+      <End Role="OBTProcesoColaboradorActividadPrioritaria" EntitySet="OBTProcesoColaboradorActividadPrioritaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorActividadPrioritaria_OBTProcesoColaborador" Association="Self.FK_OBTProcesoColaboradorActividadPrioritaria_OBTProcesoColaborador">
+      <End Role="OBTProcesoColaborador" EntitySet="OBTProcesoColaborador" />
+      <End Role="OBTProcesoColaboradorActividadPrioritaria" EntitySet="OBTProcesoColaboradorActividadPrioritaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorEvaluacion_OBTEstadoEvaluacion" Association="Self.FK_OBTProcesoColaboradorEvaluacion_OBTEstadoEvaluacion">
+      <End Role="OBTEstadoEvaluacion" EntitySet="OBTEstadoEvaluacion" />
+      <End Role="OBTProcesoColaboradorEvaluacion" EntitySet="OBTProcesoColaboradorEvaluacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorEvaluacion_OBTProcesoColaborador" Association="Self.FK_OBTProcesoColaboradorEvaluacion_OBTProcesoColaborador">
+      <End Role="OBTProcesoColaborador" EntitySet="OBTProcesoColaborador" />
+      <End Role="OBTProcesoColaboradorEvaluacion" EntitySet="OBTProcesoColaboradorEvaluacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorEvaluacion_OBTResultadoEvaluacion" Association="Self.FK_OBTProcesoColaboradorEvaluacion_OBTResultadoEvaluacion">
+      <End Role="OBTResultadoEvaluacion" EntitySet="OBTResultadoEvaluacion" />
+      <End Role="OBTProcesoColaboradorEvaluacion" EntitySet="OBTProcesoColaboradorEvaluacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorRecurso_OBTProcesoColaborador" Association="Self.FK_OBTProcesoColaboradorRecurso_OBTProcesoColaborador">
+      <End Role="OBTProcesoColaborador" EntitySet="OBTProcesoColaborador" />
+      <End Role="OBTProcesoColaboradorRecurso" EntitySet="OBTProcesoColaboradorRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBTProcesoColaboradorRecurso_OBTRecurso" Association="Self.FK_OBTProcesoColaboradorRecurso_OBTRecurso">
+      <End Role="OBTRecurso" EntitySet="OBTRecurso" />
+      <End Role="OBTProcesoColaboradorRecurso" EntitySet="OBTProcesoColaboradorRecurso" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
